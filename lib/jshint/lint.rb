@@ -96,7 +96,7 @@ module Jshint
       js_asset_files = []
       file_paths.each do |path|
         Dir.glob(path) do |file|
-          js_asset_files << file.reject {|file| exclude_file?(file)}
+          js_asset_files << file unless exclude_file?(file)
         end
       end
 
