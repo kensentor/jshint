@@ -44,7 +44,7 @@ module Jshint::Reporters
     # @param errors [Array] The errors for the file
     # @return [void]
     def print_errors_for_file(file, errors)
-      output << "Checked #{file}....#{errors.length} errors found."
+      output << "Checked #{file}....#{errors.length} errors found.\n"
       errors.map do |error|
         output << "#{file}: line #{error['line']}, col #{error['character']}, #{error['reason']}\n" unless error.nil?
       end
